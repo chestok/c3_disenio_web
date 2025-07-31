@@ -38,53 +38,96 @@
 
     <!-- Dropdown Cómo llegar -->
     <div class="dropdown">
-      <button class="nav-btn">Cómo llegar ▼</button>
+      <button class="nav-btn">Cómo llegar</button>
       <div class="dropdown-content">
         <a href="#mapa">Mapa interactivo</a>
-        <a href="#colectivos">Líneas de colectivos</a>
+        <a href="#colectivos">En colectivo</a>
       </div>
     </div>
 
-    <!-- Dropdown Colectivos disponibles -->
-    <div class="dropdown">
-      <button class="nav-btn">Colectivos ▼</button>
-      <div class="dropdown-content">
-        <p style="margin: 8px 0 4px;">Líneas disponibles:</p>
-        <ul style="list-style: none; padding-left: 0; margin: 0 0 8px 0;">
-          <li>Línea 23</li>
-          <li>Línea 27</li>
-          <li>Línea 31</li>
-        </ul>
-      </div>
-    </div>
+<!-- Modal Moovit -->
+<div id="moovit-modal" class="moovit-modal">
+  <div class="moovit-modal-content">
+    <span id="close-moovit-modal" class="moovit-close">&times;</span>
+    <h2>¿Cómo llegar en colectivo?</h2>
+    <p>Con la app <strong>Moovit</strong> podés consultar qué colectivos tomar, sus horarios y rutas exactas para llegar a tu destino en Paraguay.</p>
+    <a href="https://moovitapp.com/index/es-419/transporte_p%C3%BAblico-Asunci%C3%B3n-5799" target="_blank" class="btn-moovit">Abrir Moovit 🚍</a>
+  </div>
+</div>
+
+       <!-- Botón para Contacto -->
+<button id="contact-btn" class="nav-btn">Contacto</button>
+
+<!-- Modal Contacto -->
+<div id="contact-modal" class="modal">
+  <div class="modal-content">
+    <span id="closeContactBtn" class="close">&times;</span>
+    <h2>Contacto</h2>
+    <form id="contactForm" action="https://formsubmit.co/tuemail@gmail.com" method="POST">
+      <input type="text" name="nombre" placeholder="Tu nombre" required />
+      <input type="email" name="email" placeholder="Tu correo electrónico" required />
+      <textarea name="mensaje" rows="5" placeholder="Tu mensaje..." required></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </div>
+</div>
 
     <!-- Botón dónde comer -->
     <button id="food-btn" class="nav-btn">Dónde comer</button>
 
-    <!-- Pantalla emergente de restaurantes -->
-    <div id="food-popup" class="popup-overlay">
-      <div class="popup-content">
-        <button id="close-food-popup" class="close-btn">✖</button>
-        <h2>Restaurantes recomendados</h2>
-        <div class="restaurantes">
-          <div class="restaurante">
-            <img src="img_bolsi.jpg" alt="Bolsi" />
-            <a href="https://maps.app.goo.gl/KEvMXUPaioEztoZq7" target="_blank">Bolsi</a>
-          </div>
-          <div class="restaurante">
-            <img src="img_eustaquia.jpg" alt="Ña Eustaquia" />
-            <a href="https://maps.app.goo.gl/5DBfMKVrrzdm3dx9A" target="_blank">Ña Eustaquia</a>
-          </div>
-          <div class="restaurante">
-            <img src="img_osvaldo.jpg" alt="Lo De Osvaldo" />
-            <a href="https://maps.app.goo.gl/WDeMB4Ue4isc1fet5" target="_blank">Lo De Osvaldo - Centro</a>
-          </div>
-        </div>
+<!-- Pantalla emergente de restaurantes -->
+<div id="food-popup" class="popup-overlay">
+  <div class="popup-content">
+    <button id="close-food-popup" class="close-btn">✖</button>
+    <h2>Restaurantes recomendados</h2>
+    <div class="restaurantes">
+      <div class="restaurante">
+        <img src="logos/img_bolsi.jpg" alt="Bolsi" />
+        <a href="https://maps.app.goo.gl/KEvMXUPaioEztoZq7" target="_blank">Bolsi</a>
+      </div>
+      <div class="restaurante">
+        <img src="logos/img_eustaquia.jpg" alt="Ña Eustaquia" />
+        <a href="https://maps.app.goo.gl/5DBfMKVrrzdm3dx9A" target="_blank">Ña Eustaquia</a>
+      </div>
+      <div class="restaurante">
+        <img src="logos/img_osvaldo.jpg" alt="Lo De Osvaldo" />
+        <a href="https://maps.app.goo.gl/WDeMB4Ue4isc1fet5" target="_blank">Lo De Osvaldo - Centro</a>
+      </div>
+      <div class="restaurante">
+        <img src="logos/img_taberna.jpg" alt="Taberna Española" />
+        <a href="https://maps.app.goo.gl/YxeUCmep8aBpMJ7K9" target="_blank">Taberna Española</a>
+      </div>
+      <div class="restaurante">
+        <img src="logos/img_oga.jpg" alt="ÓGA" />
+        <a href="https://maps.app.goo.gl/JaSRnZGmZysFBkJA9" target="_blank">ÓGA</a>
+      </div>
+      <div class="restaurante">
+        <img src="logos/img_tierra.jpg" alt="Tierra Colorada Gastro" />
+        <a href="https://maps.app.goo.gl/5AjM34Md3WaFwzai9" target="_blank">Tierra Colorada Gastro</a>
+      </div>
+      <div class="restaurante">
+        <img src="logos/img_barsanmiguel.jpg" alt="Bar San Miguel" />
+        <a href="https://maps.app.goo.gl/8RFpDZbatUQnYhw98" target="_blank">Bar San Miguel</a>
+      </div>
+      <div class="restaurante">
+        <img src="logos/img_luma.jpg" alt="Casa Luma" />
+        <a href="https://maps.app.goo.gl/obb5xsJ4zqMniDP57" target="_blank">Casa Luma</a>
+      </div>
+      <div class="restaurante">
+        <img src="logos/img_paulista.jpg" alt="Paulista Grill Churrasquería" />
+        <a href="https://maps.app.goo.gl/YEBE2kHNEHCnR6NM9" target="_blank">Paulista Grill Churrasquería</a>
+      </div>
+      <div class="restaurante">
+        <img src="logos/img_acuarela.jpg" alt="Acuarela" />
+        <a href="https://maps.app.goo.gl/YEBE2kHNEHCnR6NM9" target="_blank">Acuarela</a>
       </div>
     </div>
+  </div>
+</div>
+
 
     <!-- Botón opiniones destacadas -->
-    <button id="reviews-btn" class="nav-btn">Opiniones destacadas</button>
+<button id="reviews-btn" class="nav-btn">Opiniones destacadas</button>
 
     <div class="search-icon" id="search-icon">🔍</div>
   </nav>
@@ -95,14 +138,20 @@
 </header>
 
 <section class="hero" id="hero">
+
+<video autoplay muted loop playsinline class="hero-video">
+  <source src="ASU.mp4" type="video/mp4">
+  Tu navegador no soporta el video.
+</video>
+
   <div class="overlay"></div>
   <div class="hero-content-left">
     <h1>DESCUBRÍ ASUNCIÓN</h1>
     <p>Explorá lugares únicos, eventos imperdibles y sabores auténticos</p>
     <div class="hero-buttons">
       <a href="#lugares" class="btn">Lugares</a>
-      <a href="#eventos" class="btn">Eventos</a>
-      <a href="#comida" class="btn">Comida</a>
+      <a href="https://asuncion.live/eventoss/" class="btn" target="_blank">Eventos</a>
+      <a href="#tipslocales" class="btn">Tips Locales</a>
     </div>
   </div>
 
@@ -132,30 +181,114 @@
 
 <section class="cards-section" id="lugares">
   <h2>Lugares Populares</h2>
+  <div class="carousel-container">
   <div class="cards">
-    <a href="#" class="card">
-      <img src="img_cerro.jpg" alt="Cerro Lambaré" />
+    <a href="https://maps.app.goo.gl/XpY2hxauLEVHW4Mi6"  target="_blank" class="card">
+      <img src="lugares/img_cerro.jpg" alt="Cerro Lambaré" />
       <div class="card-info">
         <h3>Cerro Lambaré</h3>
         <p>Mirador con historia y vistas únicas.</p>
       </div>
     </a>
-    <a href="#" class="card">
-      <img src="img_costa.jpg" alt="Costanera" />
+
+    <a href="https://maps.app.goo.gl/GjSos2yhJiVXpsr57"  target="_blank"  class="card">
+      <img src="lugares/img_costa.jpg" alt="Costanera" />
       <div class="card-info">
         <h3>Costanera</h3>
         <p>Paseo frente al río con puestos y arte urbano.</p>
       </div>
     </a>
-    <a href="#" class="card">
-      <img src="img_palacio.jpg" alt="Palacio de López" />
+
+    <a href="https://maps.app.goo.gl/v8pRLvYqFW2mmvxr9" target="_blank"  class="card">
+      <img src="lugares/img_palacio.jpg" alt="Palacio de López" />
       <div class="card-info">
         <h3>Palacio de López</h3>
         <p>Edificio icónico en el corazón de Asunción.</p>
       </div>
     </a>
+
+    <a href="https://maps.app.goo.gl/7VLYivBpN4yQwLkx5" target="_blank"  class="card">
+      <img src="lugares/img_catedral.jpg" alt="Catedral Metropolitana" />
+      <div class="card-info">
+        <h3>Catedral Metropolitana</h3>
+        <p>Templo histórico y centro religioso de la ciudad.</p>
+      </div>
+    </a>
+
+    <a href="https://maps.app.goo.gl/pekXr9ETELQ4bZ5E9" target="_blank"  class="card">
+      <img src="lugares/img_jardin.jpg" alt="Jardín Botánico" />
+      <div class="card-info">
+        <h3>Jardín Botánico</h3>
+        <p>Gran pulmón verde ideal para caminatas y picnic.</p>
+      </div>
+    </a>
+
+    <a href="https://maps.app.goo.gl/Bq3eFjQudhj9E4bB9" target="_blank"  class="card">
+      <img src="lugares/img_mercado.jpg" alt="Mercado 4" />
+      <div class="card-info">
+        <h3>Mercado 4</h3>
+        <p>Tradición, comercio y gastronomía en un solo lugar.</p>
+      </div>
+    </a>
+
+    <a href="https://maps.app.goo.gl/kgTt2iK3Aco288pJ9" target="_blank"  class="card">
+      <img src="lugares/img_panteon.jpg" alt="Panteón de los Héroes" />
+      <div class="card-info">
+        <h3>Panteón de los Héroes</h3>
+        <p>Monumento nacional y símbolo histórico del país.</p>
+      </div>
+    </a>
+
+    <a href="https://maps.app.goo.gl/oBaB9j81NrmDayjM9" class="card">
+      <img src="lugares/img_palma.jpg" alt="Calle Palma" />
+      <div class="card-info">
+        <h3>Calle Palma</h3>
+        <p>Paseo peatonal con tiendas, bares y cultura urbana.</p>
+      </div>
+    </a>
+
+    <a href="https://maps.app.goo.gl/qVNidjoqKyH9PwPv6" target="_blank"  class="card">
+      <img src="lugares/img_museo.jpg" alt="Museo del Barro" />
+      <div class="card-info">
+        <h3>Museo del Barro</h3>
+        <p>Arte indígena, colonial y contemporáneo en un solo espacio.</p>
+      </div>
+    </a>
+
+    <a href="https://maps.app.goo.gl/CKxdaEKA3deAmzss8" target="_blank"  class="card">
+      <img src="lugares/img_cpj.jpg" alt="Centro Cultural Paraguayo Japonés" />
+      <div class="card-info">
+        <h3>CPJ</h3>
+        <p>Eventos, exposiciones y cultura en un espacio moderno.</p>
+      </div>
+    </a>
+
+    <a href="https://maps.app.goo.gl/8qozbNLw6WqHRu8n7" target="_blank"  class="card">
+      <img src="lugares/img_loma.jpg" alt="Loma San Jerónimo" />
+      <div class="card-info">
+        <h3>Loma San Jerónimo</h3>
+        <p>Barrio colorido con miradores y arte local.</p>
+      </div>
+    </a>
+
+    <a href="https://maps.app.goo.gl/1dZoXzZpn8McdP6WA" target="_blank"  class="card">
+      <img src="lugares/img_carmelitas.jpg" alt="Paseo Carmelitas" />
+      <div class="card-info">
+        <h3>Paseo Carmelitas</h3>
+        <p>Zona moderna con bares, restaurantes y vida nocturna.</p>
+      </div>
+    </a>
+
+    <a href="https://maps.app.goo.gl/PSp5YoapYNZ6R5Qq8" target="_blank"  class="card">
+      <img src="lugares/img_conmebol.jpg" alt="CONMEBOL" />
+      <div class="card-info">
+        <h3>Conmebol</h3>
+        <p>Sede de la Confederación Sudamericana de Fútbol, con museo y espacios culturales.</p>
+      </div>
+    </a>
   </div>
 </section>
+
 
 <section class="map-section" id="mapa">
   <div class="map-content">
@@ -176,6 +309,75 @@
     </div>
   </div>
 </section>
+
+<section id="reviews" style="display:none;">
+  <h2>Opiniones destacadas</h2>
+  <div class="comments-list"></div>
+  <form id="reviewsForm">
+    <input type="text" name="name" placeholder="Tu nombre" required />
+    <textarea name="comment" placeholder="Dejá tu opinión" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<section id="tipslocales" class="tips-locales">
+  <h2>🧭 Tips Locales</h2>
+
+  <h3>🎭 Cultura y Costumbres</h3>
+  <ul>
+    <li>La gente es amable y suele saludar con un <strong>“¿Mba'eichapa?”</strong> o simplemente <strong>“Hola”</strong>.</li>
+    <li>El <strong>tereré</strong> es una bebida tradicional y una costumbre social: ¡no dudes si te invitan!</li>
+    <li>Se valora mucho la familia y las reuniones informales.</li>
+  </ul>
+
+  <h3>☀️ Clima y Ropa Recomendada</h3>
+  <ul>
+    <li><strong>Verano (dic-mar):</strong> Muy caluroso (35 °C+). Llevar ropa ligera, protector solar y sombrero.</li>
+    <li><strong>Invierno (jun-ago):</strong> Suave pero con días frescos. Una campera ligera suele bastar.</li>
+    <li>Las lluvias pueden ser intensas en primavera.</li>
+  </ul>
+
+  <h3>🗣️ Frases Útiles en Guaraní y Español</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Español</th>
+        <th>Guaraní</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Hola</td><td>Mba'eteko</td></tr>
+      <tr><td>Gracias</td><td>Aguyje</td></tr>
+      <tr><td>¿Cuánto cuesta?</td><td>Mboypa</td></tr>
+      <tr><td>Adiós</td><td>Jajotopata</td></tr>
+      <tr><td>Está rico</td><td>He</td></tr>
+    </tbody>
+  </table>
+  <p><em>Tip:</em> No hace falta hablar guaraní, pero a los locales les encanta cuando alguien lo intenta.</p>
+
+  <h3>🚶‍♂️ Seguridad</h3>
+  <ul>
+    <li>Evitar zonas poco iluminadas por la noche.</li>
+    <li>Usar apps de transporte conocidas (Bolt, Uber).</li>
+    <li>No mostrar objetos de valor en la vía pública.</li>
+  </ul>
+
+  <h3>🕐 Horarios Típicos</h3>
+  <ul>
+    <li>Desayuno: entre 6:30 y 8:00.</li>
+    <li>Almuerzo: 11:30 a 13:30. ¡Todo se detiene para comer!</li>
+    <li>Cena: 19:30 a 21:00.</li>
+    <li>Domingos: muchos locales cierran por la tarde. Planificá visitas con tiempo.</li>
+  </ul>
+
+  <h3>💡 Otros Consejos Útiles</h3>
+  <ul>
+    <li>La mayoría de los comercios acepta tarjetas, pero siempre es bueno tener algo de efectivo.</li>
+    <li>Hay Wi-Fi gratuito en varias plazas del centro.</li>
+    <li>Se conduce por la derecha y las motos abundan en el tránsito.</li>
+  </ul>
+</section>
+
 
 <footer class="footer">
   <p>© 2025 Sebas. Todos los derechos reservados.</p>

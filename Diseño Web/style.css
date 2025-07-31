@@ -1,3 +1,4 @@
+
 /* ========== RESET ========== */
 * {
   margin: 0;
@@ -156,7 +157,6 @@ body {
 
 /* ========== HERO SECTION ========== */
 .hero {
-  background-image: url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -165,6 +165,16 @@ body {
   align-items: center;
   justify-content: flex-start;
   padding: 0 60px;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 .overlay {
@@ -271,6 +281,7 @@ body {
 }
 
 .date-item.active {
+  font-size: 26px; 
   font-weight: 700;
   color: #f2c14e;
   text-decoration: underline;
@@ -282,7 +293,6 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  /* Eliminado transform para mejor posicionamiento con JS */
   background-color: rgba(0, 0, 0, 0.85);
   padding: 12px;
   border-radius: 8px;
@@ -312,36 +322,46 @@ body {
 .cards-section h2 {
   margin-bottom: 40px;
   font-size: 32px;
+  color: white;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
 }
 
 .cards {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 1rem;
+  width: max-content;
+  animation: scrollSlider 60s linear infinite;
+  will-change: transform;
+  pointer-events: none;
 }
 
 .card {
   position: relative;
-  width: 280px;
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  min-width: 250px;
+  flex-shrink: 0;
+  background: #222;
   color: white;
+  border-radius: 12px;
+  text-align: center;
+  overflow: hidden;
+  pointer-events: auto; /* <- reactivamos hover */
   transition: transform 0.3s ease;
-  text-decoration: none;
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform-origin: center center;
 }
 
 .card img {
   width: 100%;
-  height: 180px;
+  height: 150px;
   object-fit: cover;
-  display: block;
 }
 
 .card-info {
@@ -349,7 +369,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   padding: 15px;
   opacity: 0;
   transform: translateY(100%);
@@ -360,7 +380,7 @@ body {
 .card:hover .card-info {
   opacity: 1;
   transform: translateY(0);
-  pointer-events: auto;
+  pointer-events: auto; 
 }
 
 .card-info h3 {
@@ -374,6 +394,14 @@ body {
   margin: 0;
 }
 
+@keyframes scrollSlider {
+  100% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 /* ========== MAP SECTION ========== */
 .map-section {
   height: 100vh;
@@ -549,6 +577,14 @@ body {
   background-color: #e5b731;
 }
 
+.moovit-modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.moovit-modal-content p {
+  margin-bottom: 30px;
+}
+
 /* ===== POPUP DÓNDE COMER ===== */
 .popup-overlay {
   position: fixed;
@@ -638,5 +674,280 @@ body {
 }
 
 .restaurante a:hover {
-  color: #ff6600;
+  color: #e55a00;
+}
+
+.restaurantes {
+  max-height: 300px; 
+  overflow-y: auto;
+  padding-right: 8px; 
+  scrollbar-width: thin; 
+  scrollbar-color: #ff6600 transparent; 
+}
+
+.restaurantes::-webkit-scrollbar {
+  width: 8px;
+}
+
+.restaurantes::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.restaurantes::-webkit-scrollbar-thumb {
+  background: #f2c14e;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.restaurantes::-webkit-scrollbar-thumb:hover {
+  background: #f2c14e;
+}
+/* --- Modal Moovit --- */
+.moovit-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.moovit-modal-content {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.moovit-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+}
+
+.btn-moovit {
+  background-color: #f2c14e;
+  color: black;
+  font-weight: bold;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  width: fit-content;
+} 
+
+/* ===== Tip Locales ===== */
+
+#tipslocales {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  scroll-margin-top: 100px; 
+  display: none;
+}
+
+#tipslocales h2, #tipslocales h3 {
+  color: white;
+  margin-top: 20px;
+}
+
+#tipslocales ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+#tipslocales table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+#tipslocales th, #tipslocales td {
+  border: 1px solid white;
+  padding: 10px;
+  text-align: left;
+}
+
+#tipslocales th {
+  background-color: #f5f5f5;
+}
+
+.tips-locales th {
+  background-color: #eee;
+  font-weight: bold;
+  color: black;
+}
+
+/* ===== Contacto ===== */
+
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 2rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  text-align: left;
+  color: white;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+  transition: color 0.2s ease-in-out;
+}
+
+.close:hover {
+  color: #ff5e5e;
+}
+
+.modal-content form input,
+.modal-content form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  resize: none;
+}
+
+.modal-content form button {
+  background: #f2c14e;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  width: 100%;
+}
+
+.modal-content form button:hover {
+  background: #e0b847;
+}
+
+
+/* ===== comentarios===== */
+
+#reviews {
+  background: rgba(0, 0, 0, 0.85);
+  max-width: 100vd;
+  margin: 40px auto;
+  padding: 2rem;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  font-family: 'Segoe UI', sans-serif;
+ scroll-margin-top: 100px; 
+}
+
+#reviews h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #f2c14e;
+  text-align: center;
+}
+
+#reviews form input,
+#reviews form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #222;
+  color: white;
+  font-size: 1rem;
+  resize: vertical;
+  font-family: inherit;
+}
+
+#reviews form button {
+  width: 100%;
+  background-color: #f2c14e;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-family: inherit;
+}
+
+#reviews form button:hover {
+  background-color: #e0b847;
+}
+
+#reviews .comments-list {
+  margin-top: 2rem;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+#reviews .comment {
+  background-color: #222;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+#reviews .comment strong {
+  color: #f2c14e;
+}
+
+#reviews .comment p {
+  margin-top: 0.5rem;
+  color: #ddd;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-btn {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
