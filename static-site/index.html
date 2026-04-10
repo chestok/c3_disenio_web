@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LexFirma - Estudio Jurídico. Soluciones legales de excelencia con los más altos estándares de calidad y compromiso profesional.">
+  <title>LexFirma | Estudio Jurídico</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">Lex<span>Firma</span></a>
+      
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active" data-i18n="nav.home">Inicio</a></li>
+          <li><a href="services.html" class="nav-link" data-i18n="nav.services">Servicios</a></li>
+          <li><a href="firm.html" class="nav-link" data-i18n="nav.firm">La Firma</a></li>
+          <li><a href="team.html" class="nav-link" data-i18n="nav.team">Equipo</a></li>
+          <li><a href="blog.html" class="nav-link" data-i18n="nav.blog">Blog</a></li>
+          <li><a href="news.html" class="nav-link" data-i18n="nav.news">Noticias</a></li>
+          <li><a href="podcast.html" class="nav-link" data-i18n="nav.podcast">Podcast</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <select class="language-selector">
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+          <option value="pt">PT</option>
+          <option value="fr">FR</option>
+        </select>
+        <a href="contact.html" class="btn btn-primary" data-i18n="nav.contact">Contacto</a>
+      </div>
+
+      <button class="menu-toggle" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-badge fade-in" data-i18n="hero.badge">Excelencia Legal desde 1995</span>
+      <h1 class="fade-in">
+        <span data-i18n="hero.title">Soluciones Legales de</span>
+        <br>
+        <span class="text-primary" data-i18n="hero.titleHighlight">Excelencia</span>
+      </h1>
+      <p class="fade-in" data-i18n="hero.subtitle">
+        Ofrecemos asesoría jurídica integral con los más altos estándares de calidad y compromiso profesional.
+      </p>
+      <div class="hero-buttons fade-in">
+        <a href="contact.html" class="btn btn-primary" data-i18n="hero.cta">Consulta Gratuita</a>
+        <a href="firm.html" class="btn btn-outline" data-i18n="hero.learnMore">Conocer Más</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Section -->
+  <section class="section featured">
+    <div class="container">
+      <div class="featured-grid">
+        <div class="featured-image fade-in-left">
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80" alt="Abogados trabajando">
+        </div>
+        <div class="featured-content fade-in-right">
+          <h2>Más de 25 años protegiendo sus intereses</h2>
+          <p>
+            Desde nuestra fundación en 1995, hemos representado a cientos de empresas y particulares en los asuntos legales más complejos. Nuestra experiencia y dedicación nos han posicionado como una de las firmas más reconocidas del país.
+          </p>
+          <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Visitar Sitio Externo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="fade-in" data-i18n="services.title">Nuestros Servicios</h2>
+        <p class="fade-in" data-i18n="services.subtitle">Áreas de práctica especializadas para satisfacer todas sus necesidades legales.</p>
+      </div>
+      
+      <div class="grid grid-3">
+        <div class="card fade-in stagger-1">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 21h18"></path>
+              <path d="M5 21V7l8-4v18"></path>
+              <path d="M19 21V11l-6-4"></path>
+              <path d="M9 9v.01"></path>
+              <path d="M9 12v.01"></path>
+              <path d="M9 15v.01"></path>
+              <path d="M9 18v.01"></path>
+            </svg>
+          </div>
+          <h3 data-i18n="services.corporate">Derecho Corporativo</h3>
+          <p data-i18n="services.corporateDesc">Asesoría integral en fusiones, adquisiciones y gobierno corporativo.</p>
+        </div>
+
+        <div class="card fade-in stagger-2">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="m4.93 4.93 4.24 4.24"></path>
+              <path d="m14.83 9.17 4.24-4.24"></path>
+              <path d="m14.83 14.83 4.24 4.24"></path>
+              <path d="m9.17 14.83-4.24 4.24"></path>
+              <circle cx="12" cy="12" r="4"></circle>
+            </svg>
+          </div>
+          <h3 data-i18n="services.litigation">Litigios</h3>
+          <p data-i18n="services.litigationDesc">Representación experta en disputas comerciales y civiles.</p>
+        </div>
+
+        <div class="card fade-in stagger-3">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3 data-i18n="services.labor">Derecho Laboral</h3>
+          <p data-i18n="services.laborDesc">Soluciones completas en relaciones laborales y empleo.</p>
+        </div>
+
+        <div class="card fade-in stagger-4">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+              <path d="M2 12h20"></path>
+            </svg>
+          </div>
+          <h3 data-i18n="services.ip">Propiedad Intelectual</h3>
+          <p data-i18n="services.ipDesc">Protección de marcas, patentes y derechos de autor.</p>
+        </div>
+
+        <div class="card fade-in stagger-5">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path>
+              <path d="M13 5v2"></path>
+              <path d="M13 17v2"></path>
+              <path d="M13 11v2"></path>
+            </svg>
+          </div>
+          <h3 data-i18n="services.tax">Derecho Tributario</h3>
+          <p data-i18n="services.taxDesc">Planificación fiscal y cumplimiento normativo.</p>
+        </div>
+
+        <div class="card fade-in stagger-6">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <h3 data-i18n="services.realestate">Derecho Inmobiliario</h3>
+          <p data-i18n="services.realestateDesc">Transacciones inmobiliarias y desarrollo de proyectos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="section stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-in stagger-1">
+          <h3>28+</h3>
+          <p data-i18n="stats.years">Años de Experiencia</p>
+        </div>
+        <div class="stat-item fade-in stagger-2">
+          <h3>2,500+</h3>
+          <p data-i18n="stats.cases">Casos Exitosos</p>
+        </div>
+        <div class="stat-item fade-in stagger-3">
+          <h3>500+</h3>
+          <p data-i18n="stats.clients">Clientes Satisfechos</p>
+        </div>
+        <div class="stat-item fade-in stagger-4">
+          <h3>5</h3>
+          <p data-i18n="stats.offices">Oficinas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta">
+    <div class="container">
+      <h2 class="fade-in" data-i18n="cta.title">¿Necesita Asesoría Legal?</h2>
+      <p class="fade-in" data-i18n="cta.subtitle">Nuestro equipo de expertos está listo para ayudarle. Contáctenos hoy mismo.</p>
+      <a href="contact.html" class="btn btn-primary fade-in" data-i18n="cta.button">Contactar Ahora</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Lex<span>Firma</span></a>
+          <p data-i18n="footer.description">Firma de abogados líder en servicios legales corporativos y comerciales.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer.quickLinks">Enlaces Rápidos</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+            <li><a href="firm.html" data-i18n="nav.firm">La Firma</a></li>
+            <li><a href="team.html" data-i18n="nav.team">Equipo</a></li>
+            <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer.ourServices">Servicios</h4>
+          <ul>
+            <li><a href="services.html" data-i18n="services.corporate">Derecho Corporativo</a></li>
+            <li><a href="services.html" data-i18n="services.litigation">Litigios</a></li>
+            <li><a href="services.html" data-i18n="services.labor">Derecho Laboral</a></li>
+            <li><a href="services.html" data-i18n="services.ip">Propiedad Intelectual</a></li>
+            <li><a href="services.html" data-i18n="services.tax">Derecho Tributario</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer.contactInfo">Contacto</h4>
+          <ul>
+            <li>Av. Principal 1234, Piso 15</li>
+            <li>Ciudad, País 12345</li>
+            <li>+1 (555) 123-4567</li>
+            <li>contacto@lexfirma.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 LexFirma. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+        <div class="footer-legal">
+          <a href="#" data-i18n="footer.privacy">Privacidad</a>
+          <a href="#" data-i18n="footer.terms">Términos</a>
+          <a href="#" data-i18n="footer.cookies">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
